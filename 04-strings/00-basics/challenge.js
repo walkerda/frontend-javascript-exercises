@@ -1,5 +1,5 @@
 module.exports.formLetter = function(firstName, senderName, message) {
-
+	return "Hello " + firstName + ",\n\n" + message + "\n\nSincerely,\n" + senderName;
 };
 
 module.exports.sliceItAndCombineIt = function(bigString, startA, endA, startB, endB) {
@@ -7,7 +7,7 @@ module.exports.sliceItAndCombineIt = function(bigString, startA, endA, startB, e
 };
 
 module.exports.findFirstMatch = function(text, searchString) {
-
+console.log()
 };
 
 module.exports.findLastMatch = function(text, searchString) {
