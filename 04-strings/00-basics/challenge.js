@@ -7,7 +7,7 @@ module.exports.sliceItAndCombineIt = function(bigString, startA, endA, startB, e
 };
 
 module.exports.findFirstMatch = function(text, searchString) {
-console.log()
+	return text.indexOf(searchString, "red");
 };
 
 module.exports.findLastMatch = function(text, searchString) {
