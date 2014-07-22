@@ -11,7 +11,7 @@ module.exports.findFirstMatch = function(text, searchString) {
 };
 
 module.exports.findLastMatch = function(text, searchString) {
-
+	return text.lastIndexOf(searchString, "red");
 };
 
 module.exports.substringBetweenMatches = function(text, searchString) {
