@@ -7,7 +7,7 @@ module.exports.notEqual = function(one, two) {
 };
 
 module.exports.inBetween = function(lower, middle, upper) {
-
+	return (lower < middle) && (middle < upper);
 };
 
 module.exports.outsideRanges = function(number) {
