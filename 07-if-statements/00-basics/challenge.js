@@ -20,4 +20,20 @@ module.exports.checkLock = function(num1, num2, num3, num4) {
 	}
 };
 
-module.exports.canIGet = undefined;
+module.exports.canIGet = function(item, money) {
+	if ((item === "Apple Sticker") && (money >= 1)) {
+		return true;
+	}
+	else if ((item === "MacBook Air") && (money > 998)) {
+		return true;
+	}
+	else if ((item === "MacBook Pro") && (money > 1298)) {
+		return true;
+	}
+	else if ((item === "Mac Pro") && (money > 2498)) {
+		return true;
+	}	
+	else {
+		return false;
+	}
+};
