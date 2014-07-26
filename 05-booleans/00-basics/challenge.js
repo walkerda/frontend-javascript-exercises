@@ -11,10 +11,10 @@ module.exports.inBetween = function(lower, middle, upper) {
 };
 
 module.exports.outsideRanges = function(number) {
-	return (number !== 10) && (number !== 20) && (number !== 75);
+	return ((number !== 10) && (number !== 20) && (number !== 75)) && (
+		((number === 1) || (number >= 6)) || (number > 10) || (number > 20) || (number <= 42) || (number > 75));
 };
 
 module.exports.nameAndPrice = function(name, price) {
-	console.log((name === 'NYTimes') || (name === 'LATimes') && (price >= 1));
 	return ((name === 'NYTimes') && (price >= 1)) || ((name === 'LATimes') && (price >= 1));
 };
