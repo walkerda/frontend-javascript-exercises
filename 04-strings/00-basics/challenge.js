@@ -17,6 +17,7 @@ module.exports.findLastMatch = function(text, searchString) {
 };
 
 module.exports.substringBetweenMatches = function(text, searchString) {
+<<<<<<< Updated upstream
 
 =======
 =======
@@ -34,5 +35,8 @@ module.exports.substringBetweenMatches = function(text, searchString) {
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
+>>>>>>> Stashed changes
+=======
+	return text.substring(text.lastIndexOf(searchString), 13);
 >>>>>>> Stashed changes
 };
