@@ -3,7 +3,7 @@ module.exports.newArray = function(w,x,y,z) {
 
 };
 
-module.exports.firstAndLast = function(myArray) {
-	myArray = [1, 2, 3];
-	return myArray[0];
+module.exports.firstAndLast = function(array) {
+	var lastElementIndex = array.length - 1;
+	return [array[0], array[lastElementIndex]];
 };
