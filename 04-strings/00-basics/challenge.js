@@ -22,4 +22,5 @@ module.exports.substringBetweenMatches = function(text, searchString) {
 		start,
 		end
 	);
+
 };
