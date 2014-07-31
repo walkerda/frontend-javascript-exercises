@@ -9,12 +9,21 @@ module.exports.createCourse = function(title, duration, students) {
 	// return course;
 
 	//OPTION 2
-	var course = {};
-	course.title = title;
-	course.duration = duration;
-	course.students = students;
+	// var course = {};
+	// course.title = title;
+	// course.duration = duration;
+	// course.students = students;
 	
-	return course; 
+	// return course; 
+
+	//OPTION 3
+	var Course = function() {
+		this.title = title;
+		this.duration = duration;
+		this.students = students;
+	};
+	var x = new Course();
+	return x;
 };
 
 module.exports.addProperty = function(object, newProp, newValue) {
@@ -25,31 +34,31 @@ module.exports.addProperty = function(object, newProp, newValue) {
 	//why doesn't dot notation work???
 	
 	//OPTION 2
-	var newObject = object;
-	newObject[newProp] = newValue;
+	// var newObject = object;
+	// newObject[newProp] = newValue;
 
-	return newObject;
+	// return newObject;
+
+	//OPTION 3
+	object[newProp] = newValue;
+	return object;
 };
 
 module.exports.formLetter = function(letter) {
-	var letterInfo = {
-		recipient: letter.recipient,
-		sender: letter.sender,
-		msg: letter.msg
-	};
 
-	var letterStr = 'Hello ' + letterInfo.recipient + ',\n\n' + letterInfo.msg + '\n\nSincerely,\n' + letterInfo.sender;
+	var letterStr = 'Hello ' + letter.recipient + ',\n\n' + letter.msg + '\n\nSincerely,\n' + letter.sender;
 
 	return letterStr;
 };
 
 module.exports.canIGet = function(item, money) {
-	var cost = {
-		item: item,
-		amount: money
+	var thing = {
+		"MacBook Air": 999,
+		"MacBook Pro": 1299,
+		"Mac Pro": 2499,
+		"Apple Sticker": 1
 	};
 
-	console.log(Boolean(cost));
+	return thing[item] <= money;
 	
-	return Boolean(cost);
 };
