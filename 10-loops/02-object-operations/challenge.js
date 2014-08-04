@@ -14,13 +14,11 @@ module.exports.extend = function(dest, src) {
 };
 
 module.exports.hasElems = function(object, array) {
-	var newObject = {};
 
-	for (var key in array) {
-		newObject[key] = array[key];
-	}
-	console.log(newObject[key]);
-	console.log(newObject[key] === object[key]);
-	return newObject[key] === object[key];
-
+    for (var key in array) {
+        if (object[array[key]] === undefined) {
+            return false;
+        }
+    }
+    return true;
 };

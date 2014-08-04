@@ -13,6 +13,12 @@ describe("copy", function() {
     expect(result).to.not.equal(orig);
     expect(result).to.deep.eql(orig);
   });
+
+    it ("should create a copy of an array", function () {
+        var array = [1,2,3];
+        result = challenge.copy(array);
+        console.log(result);
+    })
 });
 
 describe("extend", function() {
